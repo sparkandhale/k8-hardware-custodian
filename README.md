@@ -1,5 +1,5 @@
 # k8-maas-custodian
-A metal-as-a-service custodian, which wakes up nodes with Wake-On-LAN and makes them available to a Kubernetes cluster in need (employing the K8-API-Server). In the other way, the k8-maas-custodian decomissions metal (physical nodes), which is not needed anymore by the Kubernetes cluster and puts them asleep.
+A lightweight metal-as-a-service custodian, which wakes up nodes with Wake-On-LAN and makes them available to a Kubernetes cluster in need (employing the K8-API-Server). In the other way, the k8-maas-custodian decomissions metal (physical nodes), which is not needed anymore by the Kubernetes cluster and puts them asleep.
 
 ## Functionality
 - Manually register MAC addresses with a form.
@@ -8,6 +8,7 @@ A metal-as-a-service custodian, which wakes up nodes with Wake-On-LAN and makes 
 - Wake up one or many metals/nodes.
 - Learn what the Kubernetes Cluster can dispense/suspend.
 - Put to sleep idle nodes marked by Kubernetes (or anticipated by stats).
+- It's invokes the Ubuntu MaaS Service by sending REST request to the regiond service, which will provision fresh OS to the servers.
 
 ## Tech Stack
 - Starelette/JINJA2 for the website.
